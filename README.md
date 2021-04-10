@@ -11,9 +11,9 @@ to run please do the following steps:
 5. install dependencies by running `npm install` in the project folder's terminal
 6. to run the server you can run the default file /bin/www or /app.js or running `npm run start` in terminal
 
-P.S: to run the code your PostgreSQL server should have a user with username/password authentication
-
 to use the API please refer to the postman document in /document folder
+
+the default company username=company1 password=123321
 
 # structure
 the server has (model/controller/view) structure as described below:
