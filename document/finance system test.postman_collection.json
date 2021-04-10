@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "2de0b708-776e-44de-ad6d-1f0eb2bd1c2b",
+		"name": "finance system test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Alohamora16",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "company1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check discount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImNvbXBhbnkxIiwicm9sZSI6ImNvbXBhbnkiLCJpYXQiOjE2MTgwNjMyODUsImV4cCI6MTYxODIzNjA4NX0.asQGqK4K14OifMC0PQmVId1Ca8h8Ij9M5vK7s6pAFHE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"discountCode\": \"category6Discount\",\r\n    \"userID\": 1,\r\n    \"productName\": \"p4\",\r\n    \"cost\": \"101\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/finance/discount",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"finance",
+						"discount"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "accepted with discount code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"discountCode\": \"category6Discount\",\r\n    \"userID\": 1,\r\n    \"productName\": \"p4\",\r\n    \"cost\": \"101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/finance/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"finance",
+								"discount"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26-iWh+MbY1DEa0CjTNxghw4KcvwE4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Apr 2021 13:57:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"percent\": 43\n    }\n}"
+				},
+				{
+					"name": "accepted no discount code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"discountCode\": \"\",\r\n    \"userID\": 1,\r\n    \"productName\": \"p4\",\r\n    \"cost\": \"101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/finance/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"finance",
+								"discount"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-0LiUTYAM02fJ+ubsBsgJQBNJbNI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Apr 2021 11:11:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"percent\": 3\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get product category tree",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImNvbXBhbnkxIiwicm9sZSI6ImNvbXBhbnkiLCJpYXQiOjE2MTc5NzE4MDcsImV4cCI6MTYxODE0NDYwN30.3idxsLQXQ5QfF8Gd_7aEhr9kML-E5F54S0yLfeERBpY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/product/tree",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"tree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset company password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"company1\",\r\n    \"password\": \"123321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/reset-password",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
