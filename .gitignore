@@ -1,0 +1,8 @@
+/node_modules/
+.idea/encodings.xml
+.idea/hastagbime backend.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.gitignore
