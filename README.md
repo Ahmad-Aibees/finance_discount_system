@@ -2,7 +2,7 @@
 this repository includes a node js server code that uses PostgreSQL database and EXPRESS JS
 the API's purpose is to specify whether a product has a discount for the specified company and user and discount code (if received)
 
-# runnin the code
+# running the code
 to run please do the following steps:
 1. clone the repository on your system
 2. make sure your PostgreSQL is connected
