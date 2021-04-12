@@ -77,72 +77,6 @@
 			},
 			"response": [
 				{
-					"name": "accepted with discount code",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"discountCode\": \"category6Discount\",\r\n    \"userID\": 1,\r\n    \"productName\": \"p4\",\r\n    \"cost\": \"101\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/finance/discount",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"finance",
-								"discount"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "38"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"26-iWh+MbY1DEa0CjTNxghw4KcvwE4\""
-						},
-						{
-							"key": "Date",
-							"value": "Sat, 10 Apr 2021 13:57:34 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"percent\": 43\n    }\n}"
-				},
-				{
 					"name": "accepted no discount code",
 					"originalRequest": {
 						"method": "POST",
@@ -207,6 +141,72 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"percent\": 3\n    }\n}"
+				},
+				{
+					"name": "accepted with discount code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"discountCode\": \"category6Discount\",\r\n    \"userID\": 1,\r\n    \"productName\": \"p4\",\r\n    \"cost\": \"101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/finance/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"finance",
+								"discount"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26-iWh+MbY1DEa0CjTNxghw4KcvwE4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Apr 2021 13:57:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"percent\": 43\n    }\n}"
 				}
 			]
 		},
