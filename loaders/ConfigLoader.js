@@ -74,8 +74,9 @@ module.exports = {
                 console.log('body', req.body);
             }
             const status = tokens.status(req, res);
+            const company = req['company'];
             return [
-                colors.yellow(req['companyName'] || 'no company'),
+                colors.yellow(company? company['username'] : 'no company'),
                 colors.cyan(tokens.method(req, res)),
                 colors.blue(tokens.url(req, res)),
                 (status && status.charAt(0) !== 4) ? colors.green(tokens.status(req, res)) : colors.red(tokens.status(req, res)),
